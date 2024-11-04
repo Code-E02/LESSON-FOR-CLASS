@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<body>
+    <h1>This is a Crazy header </h1>
+    <p> wow this is so cool!</p>
+    <p id="ball" class="ball"></p>
+    <button  onclick="moveball(ball)" id="button">This is a button!</button>
+</body>
+<style>
+    body{
+        background-color: brown;
+        text-align: center;
+        color:black;
+        font-size: x-large;
+        font-family: Arial, Helvetica;
+    }
+     .ball{
+        height:300px;
+        width:300px;
+        background-color: antiquewhite;
+        border-radius: 50%;
+        position: relative;
+        left:17rem;
+    }
+
+</style>
+<script>
+   
+    function randomcolor(){
+        var randomC ='#' + Math.floor(Math.random()*16777215).toString(16);
+        return randomC
+        
+    }   
+    
+
+
+    function moveball() {
+        document.getElementById("ball").style.backgroundColor = randomcolor();
+           
+    }
+        
+</script>
+
+</html>
